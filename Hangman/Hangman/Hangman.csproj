@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95FBA4FF-F245-411F-AE7C-65A559F6CFB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hangman</RootNamespace>
+    <AssemblyName>Hangman</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rules.Designer.cs">
+      <DependentUpon>rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="singlePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="singlePlayer.Designer.cs">
+      <DependentUpon>singlePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainMenu.Designer.cs">
+      <DependentUpon>mainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="multiPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="multiPlayer.Designer.cs">
+      <DependentUpon>multiPlayer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="mainMenu.resx">
+      <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="multiPlayer.resx">
+      <DependentUpon>multiPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rules.resx">
+      <DependentUpon>rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="singlePlayer.resx">
+      <DependentUpon>singlePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\words.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\titleScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\exitBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\onePlayerBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\rulesBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\twoPlayersBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\rulesPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\exitBtn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\changeDifficultyBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\newWordBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\guessLetterBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\guessWordBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\gameBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\easy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\hard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\CancelDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\OKDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\CancelOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\OKOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\CancelBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\OKBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\guessWordDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\guessLetterDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\guessWordOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\guessLetterOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\twoPlayersDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\rulesDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\onePlayerDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\newWordDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\mediumDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\hardDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\exitBtn2Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\exitBtnDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\easyDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\changeDifficultyDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\twoPlayersOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\rulesOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\onePlayerOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\newWordOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\mediumOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\hardOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\exitBtn2Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\exitBtnOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\easyOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\changeDifficultyOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\musicOffDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\musicOnDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\musicOffOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\musicOffBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\musicOnOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\musicOnBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\win.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\main.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\lose.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
