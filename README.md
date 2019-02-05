@@ -1,5 +1,8 @@
 # Hangman
-A Forms based Hangman programmed in C#
+A Forms based Hangman programmed in C# using Microsoft Visual Studio Community 2017 V15.8.7
+
+# How to Run
+Download the program, extract if its a .zip. Navigate to Hangmen>bin>Debug and run the Hangman.exe.
 
 Required Functions
 - Entry of works for another player to guess
